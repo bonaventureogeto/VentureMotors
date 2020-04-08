@@ -1,0 +1,49 @@
+MODEL/DB FIELDS
+
+###LISTINGS
+id: INT
+seller: INT (FOREIGN KEY [realtor])
+title: STR
+address: STR
+city: STR
+state: STR
+zip: STR
+description: TEXT
+price: INT
+mileage(KM): INT
+fuel: STR
+body_type: STR
+drive_type: STR
+engine_size: INT
+door_count: INT
+condition: STR
+year:INT
+is_published: BOOL [true]
+list_date: DATE
+photo_main: STR
+photo_1: STR
+photo_2: STR
+photo_3: STR
+photo_4: STR
+photo_5: STR
+photo_6: STR
+
+###SELLERS
+id: INT
+name: STR
+photo: STR
+description: TEXT
+email: STR
+phone: STR
+is_mvp: BOOL [0]
+hire_date: DATE
+
+CONTACT
+id: INT
+user_id: INT
+listing: INT
+listing_id: INT
+name: STR
+phone: STR
+message: TEXT
+contact_date: DATE
