@@ -21,14 +21,14 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/3.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = '#rjef-tl*w!phi+j1n0emos9+e%0g3@5lkq!)2)%#)%&c)&g^8'
+SECRET_KEY = os.environ.get('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = os.environ.get('DEBUG')
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
-
+print(ALLOWED_HOSTS)
 # Application definition
 
 INSTALLED_APPS = [
@@ -83,10 +83,10 @@ WSGI_APPLICATION = 'venture.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'venturedb',
-        'USER': 'postgres',
-        'PASSWORD': 'Ogetoh043',
-        'HOST': 'localhost'
+        'NAME': os.environ.get('DB_NAME'),
+        'USER': os.environ.get('DB_USER'),
+        'PASSWORD': os.environ.get('DB_PASSWORD'),
+        'HOST': os.environ.get('DB_HOST')
     }
 }
 
