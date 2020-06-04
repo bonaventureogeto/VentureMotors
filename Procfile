@@ -2,4 +2,3 @@ release:  python manage.py makemigrations pages sellers listings contacts accoun
 release: python manage.py migrate
 
 web: gunicorn venture.wsgi
-
