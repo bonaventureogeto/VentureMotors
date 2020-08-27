@@ -25,7 +25,7 @@ SECRET_KEY = 'nmsfgsdgfw765329490234bsdq@y83724*&6Jhg%'
 # SECRET_KEY = os.environ.get('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['venturemotors.herokuapp.com']
 
