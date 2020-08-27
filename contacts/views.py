@@ -37,7 +37,7 @@ def contact(request):
         '. Sign into the admin panel for more info',
         'bonaogeto1@gmail.com',
         [seller_email, 'bonaogeto@gmail.com'],
-        fail_silently=False
+        fail_silently=True
     )
 
     messages.success(
